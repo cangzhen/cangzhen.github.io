@@ -5,7 +5,7 @@ title: JSLite.io
 {% include JB/setup %}
 
 <div class="header wp">
-  <!--<h1>江湾太极 <a href="#"></a></h1>-->
+  <h1>&nbsp;&nbsp;&nbsp;<!-- 江湾太极  --></h1>
   <h2>发送中华传统文化，强身健体，人人有责</h2>
 </div>
 <!-- <div class="menu wp">
