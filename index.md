@@ -1,6 +1,6 @@
 ---
 layout: JSLite
-title: JSLite.io
+title: 江湾太极—马殿银
 ---
 {% include JB/setup %}
 
@@ -28,12 +28,15 @@ title: JSLite.io
       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 上海市传统杨氏太极拳拳、剑第一名，陈氏大架第一名。
       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 纪念著名武术家纪晋山先生百年诞辰武术比赛，陈氏太极拳传统套路金奖。
       <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 中国陈家沟太极拳邀请赛，传统陈氏太极拳、剑一等奖。
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 自1995年教拳以来，培养了国内外很多的优秀太极人才，故在2000年被中国温县国际太极拳协会授予“太极拳名师”称号，现任上海市陈氏太极拳协会理事。    
+      <br>自1995年教拳以来，培养了国内外很多的优秀太极人才，故在2000年被中国温县国际太极拳协会授予“太极拳名师”称号，现任上海市陈氏太极拳协会理事。    
       </p>
   </div>
   <div class="sps">
       <h4><i class="icon_wallet"></i>联系方式</h4>
-      <p>联系人：马殿银 <br> 联系电话：13122328403 <br>上海地区授拳地点：杨浦江湾体育场、五角场创智天地EMC公司等</p>
+      <p>联系人：马殿银 
+      <br>联系电话：13122328403 
+      <br>授拳地点：杨浦区江湾体育场
+      <br>授拳时间：周一、三、五晚上19:00~21:00，周六、日早上7:00~10:00</p>
     </div>
   <div class="sps">
       <h4><i class="icon_lab"></i>陈氏太极拳</h4>
