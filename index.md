@@ -5,9 +5,8 @@ title: JSLite.io
 {% include JB/setup %}
 
 <div class="header wp">
-  <h1>JSLite.io <a href="#"></a></h1>
-  <h2>让web开发更迅速，下载执行更快、量级更轻，针对现代高级浏览器的JavaScript库。
-推进前端开发标准对于攻城师来说，人人有责。</h2>
+  <h1>江湾太极 <a href="#"></a></h1>
+  <h2>发送中华传统文化，强身健体，人人有责</h2>
 </div>
 <div class="menu wp">
   <ul class="wp">
