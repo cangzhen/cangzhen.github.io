@@ -224,10 +224,15 @@
 		    });
 		},
 		filter:function(selector){
+      		if (WCJ.isFunction(selector)) return this.not(this.not(selector))
 			return WCJ(filter.call(this, function(element){
         		return WCJ.matches(element, selector)
 		    }))
 		},
+	    is: function(selector){
+	    	if (this.length > 0 && WCJ.isObject(selector)) return this.indexOf(selector)>-1?true:false;
+	    	return this.length > 0 && WCJ.matches(this[0], selector);
+	    },
 	    not:function(selector){
 	    	var nodes = [];
 	    	if (WCJ.isFunction(selector)&& selector.call !== undefined){
@@ -253,6 +258,7 @@
 			});
 			return WCJ(ancestors).filter(selector || '*');
 		},
+	    eq: function(idx){return idx === -1 ? WCJ(this.slice(idx)) : WCJ(this.slice(idx, + idx + 1))},
 		children:function(selector){
 			var arr=this.pluck('children'),e=[];
 			filter.call(arr, function(item, idx){ 
@@ -415,30 +421,34 @@
 		},
 		param:function(obj,traditional,scope){
 	        if(WCJ.type(obj) == "String") return obj;
-	        var params = [];
+	        var params = [],str='';
         	params.add=function(key, value){
-  				this.push(escape(key) + '=' + escape(value== null?"":value))
+  				this.push(encodeURIComponent(key) + '=' + encodeURIComponent(value== null?"":value))
         	};
 			if(scope==true&&WCJ.type(obj)=='Object') params.add(traditional,obj)
-	        else for(var p in obj) {
-	            var v = obj[p];
-	            var k = (function(){
-	            	if (traditional) {
-	            		if (traditional==true) {
-	            			return p
-	            		}else{
-		            		if(scope&&WCJ.type(obj)=='Array'){
-		            			return traditional
-		            		}
-		            		return traditional + "[" + (WCJ.type(obj)=='Array'?"":p) + "]";
-	            		};
-	            	};
-	            	return p
-	            })();
-	            params.push(typeof v=="object"?this.param(v, k ,traditional):params.add(k,v));
-	        };
-	        var dd = params.join("&");
-	        return unescape(dd);
+	        else {
+		        for(var p in obj) {
+		            var v = obj[p],str='',
+		            	k = (function(){
+			            	if (traditional) {
+			            		if (traditional==true) return p;
+			            		else{
+				            		if(scope&&WCJ.type(obj)=='Array'){
+				            			return traditional
+				            		}
+				            		return traditional + "[" + (WCJ.type(obj)=='Array'?"":p) + "]";
+			            		};
+			            	};
+			            	return p
+			            })();
+		            if (typeof v=="object") {
+		            	str=this.param(v, k ,traditional);
+		            }else str=params.add(k,v);
+
+		            if (str) params.push(str);
+		        };
+	    	}
+	        return params.join('&');
 		},
 		get:function(url, success){ WCJ.ajax({type:'GET',url: url, success: success}) },
 		post:function(url, data, success, dataType){
@@ -509,9 +519,26 @@
     		for (name in headers) nativeSetHeader.apply(xhr, headers[name]);
 
 			xhr.send(data);
-
     	}
 	});
+	WCJ.fn.extend({
+		serializeArray:function(){
+		    var result = [], el,type
+		    $([].slice.call(this.get(0).elements)).each(function(){
+				el = $(this),type = el.attr('type')
+				if (this.nodeName.toLowerCase() != 'fieldset' && !this.disabled && type != 'submit' && type != 'reset' && type != 'button' && ((type != 'radio' && type != 'checkbox') || this.checked)) {
+					result.push({name: el.attr('name'), value: el.val() }) 
+				}
+		    })
+		    return result
+		},
+		serialize:function(result){
+			result = [],this.serializeArray().forEach(function(elm){
+			  result.push(encodeURIComponent(elm.name) + '=' + encodeURIComponent(elm.value))
+			})
+			return result.join('&')
+		}
+	})
 
 	//修复IE，增加方法getComputedStyle为对象的窗口和getPropertyValue方法的对象，它返回的getComputedStyle
 	if (!window.getComputedStyle) {

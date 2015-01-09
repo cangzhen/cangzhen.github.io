@@ -7,7 +7,8 @@ html,body{height: 100%;}
 .wp{min-width: 980px;margin:0 auto 0 auto;}
 .w{width: 980px;}
 
-.header{background-color: #313131;padding:178px 0 140px;text-align: center;color: #fff;background-image: url(image/Wallpaper.jpg);background-size: cover;background-position: center bottom;}
+.header{background-color: #02ADA6;padding:60px 0 52px;text-align: center;color: #fff;
+	/*background-image: url(image/Wallpaper.jpg)*/;background-size: cover;background-position: center bottom;}
 .header h1{font-size: 100px;text-shadow: 0 1px 3px rgba(0,0,0,.4),0 0 30px rgba(0,0,0,.075); line-height: 1; letter-spacing: -2px; font-weight: 700;padding: 0 0 33px 0;font-style: italic;} 
 .header h2{font-size: 30px; font-weight: 200; width: 936px; margin: 0 auto;}
 .header img{width: 100%;visibility: visible;}
