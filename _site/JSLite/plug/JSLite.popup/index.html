@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSLite</title>
+	<link rel="stylesheet" type="text/css" href="public.css">
+	<script type="text/javascript" src="JSLite.js"></script>
+	<script type="text/javascript" src="JSLite.popup.js"></script>
+</head>
+<body>
+<!-- <div class="popupBox">
+	<div class="popupCon" style="left: 180px; top: 110px;">
+		<div class="close" onclick="popup.close(this)">x</div>
+		<div class="popupHead"> <h1 class="tit">所属组asdf</h1> </div>
+		<div class="popupContent" style="width:500px;height:300px;">test</div>
+		<div class="popupFooter"> 
+			<div class="btnFooter">
+				<input type="button" class="btn" value="反选" onclick="popup.click(this,3)">
+				<input type="button" class="btn" value="全选" onclick="popup.click(this,2)">
+				<input type="button" class="btn" value="取消" onclick="popup.click(this,1)">
+				<input type="submit" class="btn" value="确定" onclick="popup.click(this,0)">
+			</div>
+		</div>
+	</div>
+</div> -->
+
+<input type="button" value="" onclick="po()">
+
+
+<script type="text/javascript">
+function po(){
+
+	var p = new $.popup({
+	     "content":'大哥测试一下可以不？<div id="baidu" >Baidu</div>',
+	     "offset":{"top":100,"left":100,"width":600,"height":300},
+	     "event":function(){
+	         console.log("这里是执行预加载事件");
+	     }
+	});
+}
+
+
+
+var p2 = new $.popup({
+     "title":"所属组asdf",
+     "content":'大哥测试一下可以不？<div id="baidu" >Baidu</div>',
+     // "layer":true,
+     // "iframe":"http://www.baidu.com",
+     "offset":{"width":300,"height":100},
+     "event":function(){
+         console.log("这里是执行预加载事件");
+     },
+     "button":[
+         {
+             "type":"submit",
+             "value":"确定",
+             "click":function(){
+                 console.log("确定2")
+             }
+         },{
+             "type":"close",
+             "value":"关闭",
+             "click":function(){
+                 console.log("取消")
+             }
+         }
+     ]
+});
+
+
+
+// var p2 = new $.popup({
+//      "title":"所属组asdf",
+//      "content":'大哥测试一下可以不？<div id="baidu" >Baidu</div>',
+//      "layer":true,
+//      // "iframe":"http://www.baidu.com",
+//      // "offset":{"top":100,"left":100,"width":600,"height":300},
+//      "event":function(){
+//          console.log("这里是执行预加载事件");
+//      },
+//      "button":[
+//          {
+//              "type":"submit",
+//              "value":"确定",
+//              "click":function(){
+//                  console.log("确定2")
+//              }
+//          },{
+//              "type":"close",
+//              "value":"关闭",
+//              "click":function(){
+//                  console.log("取消")
+//              }
+//          }
+//      ]
+// });
+</script>
+
+
+<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd<br/>dddd
+
+</body>
+</html>

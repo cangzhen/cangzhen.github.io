@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>[转]移动web页面支持弹性滚动的3个方案</title>
+    
+    <meta name="author" content="kenny.wang">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[转]移动web页面支持弹性滚动的3个方案" />
+    <meta name="keywords" content="" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="/assets/themes/twitter/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/twitter/css/pygments.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+
+    <!-- atom & rss feed -->
+    <link href="/atom.xml" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="/rss.xml" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/">开发笔记</a>
+          <ul class="nav">
+            
+            
+            
+
+
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/archive.html">存档</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/categories.html">分类</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/pages.html">所有页面</a></li>
+      	
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+      	
+      	<li><a href="/tags.html">标签</a></li>
+      	
+      
+    
+  
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>[转]移动web页面支持弹性滚动的3个方案 <small></small></h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>17 July 2014</span>
+    </div>
+    <div class="content">
+      <p><code>position:fixed</code> 和 <code>overflow:auto</code> 进行简单的布局实现我们需要的效果，而在手机端遇到的问题如下：</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">ios4 和 android2.2 以下不支持 position:fixed
+ios 不支持 overflow:auto
+ios4 和 android2.3 以下以及不支持 overflow-scrolling
+</code></pre></div>
+<p>最严重的结果是：滚动区域内容无法拖动
+对于 ios4 和 android2.2 以下不支持 <code>position:fixed</code> 的问题，有2种布局方法可以替代。</p>
+
+<h3 id="布局一：-定义页面整体高度为100%">布局一： 定义页面整体高度为100%</h3>
+
+<p><u>然后使用 position:absolute 布局可解决</u></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!--absolute布局 [[ --&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;header&quot;</span><span class="nt">&gt;</span>header<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;main&quot;</span><span class="nt">&gt;</span>     弹性滚动区域    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;footer&quot;</span><span class="nt">&gt;</span>footer<span class="nt">&lt;/div&gt;&lt;/body&gt;</span>
+<span class="c">&lt;!--absolute布局 ]] --&gt;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">html</span><span class="o">,</span><span class="nt">body</span><span class="p">{</span><span class="k">height</span><span class="o">:</span><span class="m">100%</span><span class="p">;}</span>
+<span class="nc">.header</span><span class="o">,</span><span class="nc">.footer</span><span class="p">{</span><span class="k">height</span><span class="o">:</span><span class="m">40px</span><span class="p">;</span><span class="k">line-height</span><span class="o">:</span><span class="m">40px</span><span class="p">;</span><span class="k">background-color</span><span class="o">:</span><span class="m">#D8D8D8</span><span class="p">;</span><span class="k">text-align</span><span class="o">:</span><span class="k">center</span><span class="p">;}</span>
+<span class="nc">.header</span><span class="p">{</span><span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span><span class="k">top</span><span class="o">:</span><span class="m">0</span><span class="p">;</span><span class="k">left</span><span class="o">:</span><span class="m">0</span><span class="p">;</span><span class="k">width</span><span class="o">:</span><span class="m">100%</span><span class="p">;}</span>
+<span class="nc">.footer</span><span class="p">{</span><span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span><span class="k">bottom</span><span class="o">:</span><span class="m">0</span><span class="p">;</span><span class="k">left</span><span class="o">:</span><span class="m">0</span><span class="p">;</span><span class="k">width</span><span class="o">:</span><span class="m">100%</span><span class="p">;}</span>
+<span class="nc">.main</span><span class="p">{</span><span class="k">position</span><span class="o">:</span><span class="k">absolute</span><span class="p">;</span><span class="k">z-index</span><span class="o">:</span><span class="m">1</span><span class="p">;</span><span class="k">top</span><span class="o">:</span><span class="m">40px</span><span class="p">;</span><span class="k">left</span><span class="o">:</span><span class="m">0</span><span class="p">;</span><span class="k">bottom</span><span class="o">:</span><span class="m">40px</span><span class="p">;</span><span class="k">width</span><span class="o">:</span><span class="m">100%</span><span class="p">;}</span>
+</code></pre></div>
+<h3 id="布局二：-定义页面整体高度为100%，">布局二： 定义页面整体高度为100%，</h3>
+
+<p><u>然后使用 display:flex 布局可解决</u></p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="c">&lt;!-- flex布局 [[ --&gt;</span>
+<span class="nt">&lt;body&gt;&lt;div</span> <span class="na">class=</span><span class="s">&quot;wrap&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;header&quot;</span><span class="nt">&gt;</span>header<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;main&quot;</span><span class="nt">&gt;</span>       弹性滚动区域      <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;footer&quot;</span><span class="nt">&gt;</span>footer<span class="nt">&lt;/div&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="c">&lt;!-- flex布局 ]] --&gt;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nt">html</span><span class="o">,</span><span class="nt">body</span><span class="p">{</span><span class="k">height</span><span class="o">:</span><span class="m">100%</span><span class="p">;}</span>
+<span class="nc">.wrap</span><span class="p">{</span><span class="k">display</span><span class="o">:-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="p">;</span><span class="k">display</span><span class="o">:-</span><span class="n">webkit</span><span class="o">-</span><span class="n">flex</span><span class="p">;</span><span class="k">display</span><span class="o">:-</span><span class="n">ms</span><span class="o">-</span><span class="n">flexbox</span><span class="p">;</span><span class="k">display</span><span class="o">:</span><span class="n">flex</span><span class="p">;</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">orient</span><span class="o">:</span><span class="n">vertical</span><span class="p">;</span><span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">flex</span><span class="o">-</span><span class="k">direction</span><span class="o">:</span><span class="n">column</span><span class="p">;</span><span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">flex</span><span class="o">-</span><span class="k">direction</span><span class="o">:</span><span class="n">column</span><span class="p">;</span>
+  <span class="n">flex</span><span class="o">-</span><span class="k">direction</span><span class="o">:</span><span class="n">column</span><span class="p">;</span><span class="k">width</span><span class="o">:</span><span class="m">100%</span><span class="p">;</span><span class="k">height</span><span class="o">:</span><span class="m">100%</span><span class="p">;}</span>
+<span class="nc">.header</span><span class="o">,</span><span class="nc">.footer</span><span class="p">{</span><span class="k">height</span><span class="o">:</span><span class="m">40px</span><span class="p">;</span><span class="k">line-height</span><span class="o">:</span><span class="m">40px</span><span class="p">;</span><span class="k">background-color</span><span class="o">:</span><span class="m">#D8D8D8</span><span class="p">;</span><span class="k">text-align</span><span class="o">:</span><span class="k">center</span><span class="p">;}</span>
+<span class="nc">.main</span><span class="p">{</span><span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">box</span><span class="o">-</span><span class="n">flex</span><span class="o">:</span><span class="m">1</span><span class="p">;</span><span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">flex</span><span class="o">:</span><span class="m">1</span><span class="p">;</span><span class="o">-</span><span class="n">ms</span><span class="o">-</span><span class="n">flex</span><span class="o">:</span><span class="m">1</span><span class="p">;</span><span class="n">flex</span><span class="o">:</span><span class="m">1</span><span class="p">;</span><span class="k">width</span><span class="o">:</span><span class="m">100%</span><span class="p">;}</span>
+</code></pre></div>
+<p>那么剩下的主要问题是子容器高度超出父容器高度，子容器内容如何弹性滚动。</p>
+
+<p>对于如何使用弹性滚动，这里并没有最好的方案，具体看产品的用户群、产品的定位等，简单介绍下：</p>
+
+<hr>
+
+<h3 id="方案一：-overflow:auto和-webkit-overflow-scrolling:-touch">方案一： overflow:auto和-webkit-overflow-scrolling: touch</h3>
+
+<p><code>overflow:auto</code> 写法在 winphone8 和 android4+ 上有用。ios5+ 版本增加了一个新的属性：<code>overflow-scrolling</code> 这个属性可以激活平滑滚动，效果不错。</p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.css</span><span class="p">{</span>
+  <span class="k">overflow</span><span class="o">:</span><span class="k">auto</span><span class="p">;</span> <span class="c">/* winphone8和android4+ */</span>
+  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="k">overflow</span><span class="o">-</span><span class="n">scrolling</span><span class="o">:</span> <span class="n">touch</span><span class="p">;</span>  <span class="c">/* ios5+ */</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>适合场景：如果产品的用户群大多为 ios5+、android4+ 用户，建议采用 <code>overflow-scrolling</code> 做差异化体验，毕竟 iscroll4.js 在 android 机器下体验不顺畅，另外还加载了 10K 多的 js 代码。</p>
+
+<h3 id="方案二：-iscroll4.js和overflow:auto">方案二： iscroll4.js和overflow:auto</h3>
+
+<p>曾写过【使用iScroll.js解决ios4下不支持<code>position:fixed</code>的问题】，使用 iscroll4.js 基本上解决了页面弹性滚动的问题，总结下 iscroll4.js 的体验：</p>
+
+<ol>
+<li> 在 ios 系统上的表现十分良好，滚动顺畅</li>
+<li> 在部分 android 系统上性能较差，特别是滚动区域内容多时，滚动页面会出现卡顿</li>
+<li>ios 和 android 系统下有不少 bug，如表单获焦弹出软键盘后页面高度没有重新计算、出现闪屏等(这里不做讨论)</li>
+<li> winphone 不支持
+那么这里的处理方案是，页面初始化时判断是 weibit 浏览器则启用 iscroll4.js</li>
+</ol>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;wap ie-ova&quot;</span> <span class="na">id=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+<span class="c">&lt;!-- webkit 用户设置 ID 为 iscroll，可启用iscroll --&gt;</span> ...
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p>winphone8 手机使用如下 hack</p>
+<div class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">-ms-high-contrast</span><span class="o">:</span> <span class="nt">active</span><span class="o">),</span> <span class="o">(</span><span class="nt">-ms-high-contrast</span><span class="o">:</span> <span class="nt">none</span><span class="o">)</span> <span class="p">{</span>
+<span class="nc">.ie-ova</span><span class="p">{</span><span class="k">overflow</span><span class="o">:</span><span class="k">auto</span><span class="p">;}</span> <span class="c">/* winphone8 */</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>适合场景：如果产品的用户群有 ios 和大部分 android2+ 用户，而在 android 中的页面数据比较简单(通常弹性滚动数据只有文字)，那么使用 iscroll4.js 可保证 android2+ 的机器展现正常也不卡顿，让ios用户滚动更顺畅。</p>
+
+<h3 id="方案三：-iscroll4.js和overflow:auto和android2x.css">方案三： iscroll4.js和overflow:auto和android2x.css</h3>
+
+<p>如果产品的用户群有ios和大部分android2+用户，而在 android 中页面数据比较复杂(通常弹性滚动数据有大量图片)，那么可针对 android2+ 的机器做静态定位展现(position:static)，页面不具备滚动效果，而对于 ios 用户仍然使用 iscroll4.js。</p>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href=</span><span class="s">&quot;android2x.css&quot;</span><span class="nt">&gt;</span>
+<span class="c">&lt;!-- android2+ 用户多引用的css文件 --&gt;</span>
+
+.css{overflow:auto;/* winphone8和android4+ */}
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;wap&quot;</span> <span class="na">id=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span><span class="c">&lt;!-- ios 用户设置 ID 为 iscroll，可启用iscroll --&gt;</span> ...<span class="nt">&lt;/div&gt;</span>
+</code></pre></div>
+<p><a href="http://www.th7.cn/web/html-css/201402/18119.shtml">原文地址</a></p>
+
+    </div>
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+      
+      
+
+
+  
+     
+    	<li><a href="/categories.html#移动前端-ref">
+    		移动前端 <span>10</span>
+    	</a></li>
+    
+  
+
+
+    </ul>
+    
+
+  
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      
+      
+
+
+  
+    
+    	<li><a href="/tags.html#移动前端-ref">移动前端 <span>8</span></a></li>
+    
+    	<li><a href="/tags.html#css3-ref">css3 <span>1</span></a></li>
+    
+    	<li><a href="/tags.html#fixed-ref">fixed <span>1</span></a></li>
+    
+    	<li><a href="/tags.html#scrolling-ref">scrolling <span>1</span></a></li>
+    
+  
+
+
+
+    </ul>
+    
+
+    <hr>
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/2014/05/07/ajax%20HTML5%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87" title="Ajax html5上传图片">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/2014/08/19/%E8%AE%BE%E7%BD%AE%E5%9B%BE%E7%89%87%E7%81%B0%E5%BA%A6%E6%96%B9%E6%B3%95CSS%20firefox" title="设置图片灰度方法css firefox">Next &rarr;</a></li>
+      
+      </ul>
+    </div>
+    <hr>
+    
+
+
+  <!-- 多说评论框 start -->
+
+<div class="ds-thread" data-thread-key="[转]移动web页面支持弹性滚动的3个方案" data-title="[转]移动web页面支持弹性滚动的3个方案" data-url="blog.pc175.com"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"pc175"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0]
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p>&copy; 2015 kenny.wang 关注微博 <a href="http://weibo.com/pc175" target="_blank" title="The Definitive Jekyll Blogging Framework">一起玩Apple</a>
+          and <a href="http://www.pc175.com" target="_blank">PC175</a>
+        </p>
+      </footer>
+
+    </div>
+
+    
+
+
+  </body>
+</html>
+
