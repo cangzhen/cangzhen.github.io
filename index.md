@@ -50,6 +50,27 @@ title: 江湾太极—马殿银
       <br><a href="http://www.tudou.com/programs/view/L1e5x28Ookg">太极名师: 马殿银 陈式太极拳一路(视频)</a>
       <br><a href="http://www.tudou.com/programs/view/LTXlFrue23k/">太极名师: 马殿银 陈式太极拳二路(视频)</a>
   </div>
+   <div class="sps">
+      <h4><i class="icon_wallet"></i>弟子及学员</h4>
+      <p>
+       <a href="javascript:void(0)">朱申翔</a>
+       <a href="javascript:void(0)">谢国祥</a>
+       <a href="javascript:void(0)">吴汉民</a>
+       <a href="javascript:void(0)">徐永利</a>
+       <a href="/student/李昌振/">李昌振</a>
+       <a href="javascript:void(0)">翁志刚</a>
+       <a href="javascript:void(0)">张运炳</a>
+      </p>
+      <p>
+       <a href="javascript:void(0)">周豪</a>
+       <a href="javascript:void(0)">郁琴</a>
+       <a href="javascript:void(0)">汤秋蓉</a>
+       <a href="javascript:void(0)">杨永平</a>
+       <a href="javascript:void(0)">张成磊</a>
+       <a href="javascript:void(0)">房福军</a>
+       <a href="javascript:void(0)">待补充。。。。。。。</a>
+      </p>
+      </div>
   <div class="sps">
       <img src="/assets/themes/twitter/JSLite/image/Wallpaper.jpg" width="100%" />
    </div>
