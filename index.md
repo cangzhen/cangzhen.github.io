@@ -9,15 +9,15 @@ title: 江湾太极—马殿银
   <!-- <h2>发扬中华传统文化，强身健体，人人有责</h2> -->
   <h2>上海陈式太极拳协会江湾授课点</h2>
 </div>
-<!-- <div class="menu wp">
+<div class="menu wp">
   <ul class="wp">
-    <li><a href="https://github.com/jaywcjlove/JSLite"><i class="icon_github"></i>Github</a></li>
+<!--     <li><a href="https://github.com/jaywcjlove/JSLite"><i class="icon_github"></i>Github</a></li>
     <li><a href="javascript:void(0)"><i class="icon_bubbles"></i>地址：上海市江湾体育场</a></li>
     <li><a href="javascript:void(0)"><i class="icon_bubbles"></i>联系人：马殿银</a></li>
-    <li class="r"><a href="http://blog.sina.com.cn/u/1962138787"></i>新浪博客</a></li>
-    <li class="r"><a href="/JSLite/doc/">活动</a></li>
+    <li class="r"><a href="http://blog.sina.com.cn/u/1962138787"></i>新浪博客</a></li> -->
+    <li class="r"><a href="/categories.html">太极拳文章</a></li>
   </ul>
-</div> -->
+</div> 
 
 <div class="info wp w">
   <div class="sps">
@@ -37,14 +37,15 @@ title: 江湾太极—马殿银
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 陈式太极拳新架二路
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 陈式混元心意太极拳
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 太极推手
-     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 陈式传统太极剑
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 陈式49式太极剑
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 陈式传统太极剑
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 武当太极剑
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 杨式24式太极拳
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 杨式42式太极拳
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 杨式85式太极拳
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 杨式32式太极剑
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 杨式56式太极剑
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 散打实战技击
      </p>
   </div>
   <div class="sps">
@@ -77,7 +78,7 @@ title: 江湾太极—马殿银
        <a href="javascript:void(0)">吴汉民</a>
        <a href="javascript:void(0)">徐永利</a>
        <a href="/student/李昌振/">李昌振</a>
-       <a href="javascript:void(0)">翁志刚</a>
+       <a href="/student/翁志刚/">翁志刚</a>
        <a href="javascript:void(0)">张运炳</a>
       </p>
       <p>
