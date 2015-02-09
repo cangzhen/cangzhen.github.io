@@ -33,9 +33,10 @@ title: 江湾太极—马殿银
   </div>
   <div class="sps">
      <h4><i class="icon_bubbles"></i>授课项目</h4>
-     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 陈式太极拳新架一路
-     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 陈式太极拳新架二路
-     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 陈式混元心意太极拳
+     <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  * <a href="http://baike.baidu.com/view/1332410.htm">陈式太极拳新架一路</a>
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * <a href="/拳架/2015/02/09/新架42式表演套路/">新架42式表演套路</a>
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * <a href="http://baike.baidu.com/view/3213818.htm">陈式太极拳新架二路</a>
+     <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * <a href="http://baike.baidu.com/view/397874.htm">陈式心意混元太极拳</a>
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 太极推手
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 陈式49式太极剑
      <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; * 陈式传统太极剑
