@@ -1,0 +1,1094 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>十年工作总结</title></head><body><article class="markdown-body"><div class="toc">
+<ul>
+<li><a href="#_1">一个程序员的十年总结</a><ul>
+<li><a href="#_2">大学前</a></li>
+<li><a href="#_3">大学</a></li>
+<li><a href="#_4">华为</a></li>
+<li><a href="#_5">惠普</a></li>
+<li><a href="#2014">2014年的插曲</a></li>
+<li><a href="#_6">初次接触创业</a></li>
+<li><a href="#_7">创业就是要谈钱的</a></li>
+<li><a href="#_8">个人特点</a></li>
+<li><a href="#_9">总结</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="_1"><a name="user-content-_1" href="#_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>一个程序员的十年总结</h1>
+<p>突然间，发现已经工作十年了，无限感慨，题目叫十年工作总结，但先从头说起吧</p>
+<h2 id="_2"><a name="user-content-_2" href="#_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>大学前</h2>
+<p>出生在一个偏僻的农村家庭，小时候一直营养不良，但幸好智商没受什么影响，还能达到正常人的水平。性格比较坚强，从小到大一直坚持锻炼身体，所以现在也是正常人的体格，由于长期锻炼的缘故，体育成绩也不错，但只擅长耐力毅力相关的运动，比如长跑、太极等，中长跑学校比赛一二名水平，太极去陈家沟比赛还得过全国银牌，但对于爆发性运动一直不太擅长。</p>
+<p>没上过好学校，但小学、初中、高中，成绩一直还不错，基本上全校前三水平，大学也是top5水平。可惜高考没考好，我老婆是复旦博士，高中同班同学，论成绩她当年可是一直仰视我的，而我目前仅是个普通院校的小本科，在家天天被欺负啊。不过还好了，比正常发挥也就差个四五十分的样子，我这人比较想得开，信命，万一考好了志愿没选好，能去我们大学也不错啊，所以我还是很爱我们母校的。</p>
+<h2 id="_3"><a name="user-content-_3" href="#_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>大学</h2>
+<p>虽然我们那地方比较穷，但爸妈姐姐们都疼爱我，而且我个人比较懂事，也从不乱花钱，所以在大学之前从来没觉得穷是怎么回事：<br />
+- 小学初中学费都很少，父母也都比较勤劳，靠种地还是能很好的养孩子们的。<br />
+- 高中上的是市里的农村班，学杂费全免，而且每学期还都有奖学金拿，也没感觉到生活上的压力。</p>
+<p>2001年我和三姐一起考上大学的时候，突然之间发现怎么会这么穷：我俩每个人学费3500，还有住宿费生活费，家里就靠着几亩地，怎么去筹钱？？掏空家里积蓄加上大姐、二姐及亲戚们凑的钱，我和三姐总算可以去学校报到了。</p>
+<p>一个人去大学报到，早上到的，中午就被第一顿饭惊到了，最便宜的一顿饭就要2块多钱呢，我高中一顿也就1块多钱。然后军训结束，国庆回家至今是我比较难忘，父母心疼我，说我舍不得吃，一个月就变得又黑又瘦。而我更是心疼父母，也是苍老和黑瘦了很多，他们是不识字又老实的农民，只会种地，但再辛苦劳作再省吃俭用，每亩地也就能收入百十块钱。温家宝是2005年底取消农业税的，2001到2005年正好是农村种地没有出路的时候。这时候真是绝望啊，不是说你想努力就能挣到钱的，你想努力就能找到出路的，所以后来对于别人的绝境一直深有体会，能伸手的话绝对会帮一把。</p>
+<p>不过既然读大学了嘛，路子总是比没读大学前要宽，国庆后回来开课，然后各种勤工俭学、家教，各种奖学金、助学金。反正是除大一报到时从家里带了那些钱，之后基本上没再怎么从父母那儿拿过钱了。2005年也是大学刚刚扩招，国家很多助学政策都还没有，助学贷款这个东西，上大一时还没有这个政策，甚至大二开学还没有，当时想反正不可能再伸手往家里要钱了，再贷不到款我就不读了，一直拖到大二开学几个月才贷到款，把欠的学费补上。</p>
+<p>然后每年暑假都留在学校打工，现在很多大学生觉得做家教是浪费时间，当年对我来讲，做家教算是体面活了，我暑假的活都是除草、打扫卫生、搬运工(迎接新生抗被子、床什么的）。还给高年级的师兄卖过软件，就是上门推销，到别人店里挨个地问，用不用？很多店其实蛮客气的，拒绝也很客气；不拒绝的话就给他们演示下，即使不买，也会给我杯水喝，没想到竟然还卖出去几套，每套给我一半的提成。</p>
+<h2 id="_4"><a name="user-content-_4" href="#_4" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>华为</h2>
+<p>虽然大学四年一直为贫穷发愁，但一毕业就去了华为，这真是我的幸运。不仅仅在于华为这家企业很优秀，而且误打误撞一毕业就进入了华为内部最优秀的团队之一。我们那个团队是个完美组合，打造了一个优秀的产品，我们10个人的团队，一年就能有两三千万美刀的纯软件合同；所以部门老大半年时间内给团队所有人都加了一次工资，个别好的员工甚至加了两次，其中我就调了2次，累计幅度50%以上。因为我们产品好团队强，所以发展机会就多，2年多时间，写专利、去伊拉克拿美金、评杰出运维、评杰出研发、拿金牌团队、当项目经理、甚至还拿了个UCD(用户体验设计)设计全公司一等奖，也是不亦乐乎。</p>
+<p>若论当时最大的挑战，不是去战火纷飞的伊拉克，而是在年龄经验不足情况下以空降方式，霸王硬上弓强行担任项目经理一职。当时我们要作一个java前台产品，我们团队懂java又懂业务的巧好去南非出差了，几个月回不来；而项目交付时间紧，领导思来想去觉得我业务熟、技术也好、并且比较活泛，就问我行不行，当时年轻啊，就说怎么不行！没想到跳到大坑里了，我技术确实可以，但当时做C++负责后端的，没java前台实际经验啊。真是痛苦啊，学java学前台设计、学项目管理怎么做预算、怎么控制进度、怎么管人，还有各样的文档写作，还要跟团队内部、领导、各支援部门做好人际关系。全勤啥概念，一个月每天都去公司上班；什么加班熬夜通宵就不算了，为了按时分布版本，从早上8点不间断持续到第二天的下班。在带项目期间，人际关系却出现了问题，在接受批评方面总没有那么大度，明明正常提意见，认为是在挑刺，所以跟有些人的关系没有之前那么融洽了，这也是我后来最反思的地方。</p>
+<p>2008年老婆在上海研究生毕业，深圳离山东那么远，就想去上海，毕竟离家近些。我带的项目团队熬过最初的几个月，慢慢进入正轨了，直接老大的老大跟我谈，问我要不要再提升一下，把其它几个团队和项目也拉过来，让我做总负责(其实华为的奋斗惯例就是如此，发展机会很多，能干活的人始终不够，你只要能扛得住，就不断给你加担子，当然钱也给的很慷慨:)。不过我当时已经打算去上海了，没多长时间，就给领导说要去上海。当时也想转到上研所，老大也帮忙联系了上研所的团队，短暂交流了下；转念一想，既然要离开原来团队去重新加入另一个团队，跟去另一个新公司也没什么两样，于是一念之间就来到了上海惠普~~</p>
+<h2 id="_5"><a name="user-content-_5" href="#_5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>惠普</h2>
+<p>惠普是一家伟大的公司，说起在惠普的经历也是无限感概。我2008年加入的惠普，当时外企已经开始慢慢没落了。而且惠普本身的公司战略飘忽不定，各种的决策失误；所以跟华为相比，惠普的发展机会比较少，但惠普的包容和人性化还是让我比较怀念的。</p>
+<p>我老婆经常问我，离开华为到上海后不后悔啊，我说不啊，要不是老婆大人当时让我来上海，我估计现在已经累死了，即使累不死，身体也早就垮掉了。这也是真话，主要是担任项目经理期间，07年秋公司运动会时我还拿了个1500第三，到12月到2月期间，我就得了三次胃痉挛，这个可能有些人不知道啥概念，小腿抽筋知道吧，这是胃抽筋，真是疼啊。当时住院时老大还跑医院看我，医生说是工作压力大，精神紧张造成的，老大自己听了都有些不好意思。所以啊我当时若继续留下了，部门老大让我做几个团队的总负责，按着华为哪种加压法，可能就成下一个胡新宇了。虽然升职机会没了，但命保住了：），万事换个角度想开就好。</p>
+<p>所以也感谢惠普的人性化的弹性工作制度，让我可以有时间结识了现在的师傅，当时每天早上6点多起床，打拳一个多小时，然后8点回家吃饭再去上班，如果不是这个时间保证，太极拳也很难坚持下来，练到现在的水平。太极拳是个好东西，现在年轻人很难能沉下来学，学好了，真是一辈子收益。中间还勇敢地挑战了自己一次，以我这么笨的口舌，过了一次当老师的瘾，兼职讲了一学期的课，而且还是管理类课程，叫质量管理。从短期看，可能职业发展速度慢了些；但从长期看，太极拳和兼职当老师的经历，却会让我终生受益。</p>
+<p>虽然惠普的发展机会少些，但还是被我抓住了一次，在惠普过了一年半多相对低迷(整个团队低迷)的职业生涯后，然后在2010年初时来运转，换了个团队，再次加入了惠普最优秀的团队之一，再一次大放异彩！我们团队实力还是比较强的，大家都是实干派，其中我带两个人负责一个系统，平生第一次把这么多年学的数学真正应用于生产实践，创新的算法把我们团队的两个清华前辈都惊呆了，然后横扫客户友商一大片，加上代码质量高，需求、测试、联调推动力强，硬生生把本来没法单独立项的系统拉到了千万纯软件合同额。然后领导给我加薪了，半年时间内加了百分之四十以上，像惠普这种外企，加薪是有上限的，那年有些同事知道我绩效很好，加薪幅度比较大。他们只知道年底的那次加薪，没人知道我在几个月前已经调过百分之二十了:)。</p>
+<p>不过我们领导眼光还是不错的，我当时只是借调，干了一个月立马被强留下来。我嘛，干活真是省心，这个月做哪些功能，明年做哪些功能，进度怎么安排，怎么说服客户接受这个安排，代码开发，怎么联调、怎么推动客户以及友商配合，出了问题怎么解释和处理(当然一般也不出问题)，领导根本不用操任何心的，甚至标书都是我写，领导只负责在他们那个层次的交流和商务，签合同就可以了。而且代码质量也高，一般也不出问题，领导给客户讲起来倍儿有面子，效率又高，千万的合同额，只有我们三个人的成本，利润还是不错的。</p>
+<p>虽然我们团队很好，但人还是抗不过大趋势的，电信业的凋零还是一步步走来。2010年之后虽然团队的合同额影响不大，甚至还略有增长，但是电信的总盘子却在快速缩小，我们做的很辛苦，实际是在吞食友商的盘子，但到2013年已经到极限了，我们也开始下降了。领导为了保住利润，降低成本，就想把开发从北京上海往武汉移，同时还有一些其它节约成本的方式，这个决定是否正确现在还没法说，但影响到了我们团队的稳定，工作地点也移到客户现场，离我家较远。于是我也想看看外面什么机会。</p>
+<h2 id="2014"><a name="user-content-2014" href="#2014" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2014年的插曲</h2>
+<p>当时换工作的意愿有，但还不是那么强，碰巧看到上海支付宝招聘，就投了唯一一份简历。没几天收到面试通知，抽时间去了，从早上10点一直聊到下午4点半，相谈甚欢，第一轮技术面跟我聊到12点半，他去吃中午饭了，马上第二轮来继续聊，然后第三、第四轮。问题是我没吃午饭呢，HR最后送我走的时候，才知道我还没吃午饭，汗<del>。过了几天，电话我，说面试过了，他们要走一下流程再发Offer，怕我着急先通知下，年后发offer，没想到好不容易等到年后，晚上8点接到hr电话说他们紧急开会，政策变了，不招了</del>~~~ 。坑人吗，这么大公司怎么这么不靠谱，幸亏还没给我们领导说辞职的事呢！！过了几天才知道，我老婆舍友的老公，原来在百度的，说要去支付宝，也碰到我这种情况，没去成，后来去京东了。谁了解情况的，说说2014年初支付宝的招聘闹哪出戏，有内斗造成的吗？！</p>
+<p>2014年初与支付宝这一幕算是插曲，然后就继续干活，再待到4、5月份，每天跑客户那儿太远，实在不想这么跑了，就在家附近看看有没有机会。碰巧熟人介绍了创业公司的老板，QQ及当面谈了几次，正好是我擅长的领域，当时想着要做一个好的东西，打上个人烙印，也算是理想了；又离家很近，然后一拍即合。这样就去了第一家创业公司</p>
+<h2 id="_6"><a name="user-content-_6" href="#_6" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>初次接触创业</h2>
+<p>在第一家创业公司呆了不到一年，团队带的非常好，产品做的非常棒，为什么离开呢？当时谈的时候，是以技术合伙人身份加入，降薪去的，带股份。入职的时候，了解到我虽然降薪去的，但还是比他们最高的还要高出一截，于是在股份也没谈的情况下，就傻乎乎说，我再降四千吧。当时股份是口头承诺，这为后面的事情埋下了隐患。中间又断断续续发生了一些事，总之心里不舒服，但还是忍下来，仍然好好干活。</p>
+<p>年后CTO(公司虽小，但也有CTO嘛：）离职，CTO是盛大出来的，跟创始人一起白手起家干的，一开始连工资都没拿，后来公司有钱了，也是仅拿对折工资。再后来，还有一位北京过来的同事离职，也是降薪然后承诺股份。我陆陆续续了解到，他们走的时候啥都没有，连象征性的工资差额补偿也没有。</p>
+<p>就跟用柴火烧水一样，添一把火，再添一把火，壶里水一直很安静，最后总有一把火，让水沸腾起来，再也无法按下心来了。我想他们的时间比我长，交情比我还深，走的时候都什么也没有，万一那天因为不可抗力我也走了，不也什么都没有吗。趁着时间不算长，割肉撤吧！当时本想利益我也不要了，大家好聚好散，但事与愿违。也许我的表现一向不错，产品做的好，团队建设好，跟其它人的关系也处的非常好，突然提离职，其它人也想到什么原因了。于是当时被承诺股份的人嚷嚷分股份，创始人也答应立即分，大家挨个劝我别走了，一起参与这个事情。操作分股份的过程，诚意也不足，而且窗户纸也捅破了，彼此信任也需要重建，再留下来完全鸡肋，最终还是走了。</p>
+<h2 id="_7"><a name="user-content-_7" href="#_7" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>创业就是要谈钱的</h2>
+<p>不管打工好，创业公司也好，待遇的事一定要谈清楚。但我对谈待遇这事一直不上路，也许华为把我洗脑了&ndash;<code>只要干出成绩，公司就不会亏待你</code>。而且华为也确实做到了这一点儿，但其它公司其它人能做到概率太低了。一没跳槽二没以跳槽相威胁，因为业绩优秀，公司就给你半年内加薪百分之四五十的情况，还是比较少见的。这种事情在我身上发生了两次，华为一次，惠普一次，当然我工作猛绩效突出是一个原因，但更大的原因还是幸运，关键是老大要大方，有心思也有魄力去给你调整。不巧的事，我那两个老大，一个在深圳，一个在北京，我在上海，慢慢偏离发展方向，已经不能继续跟他们一起了。</p>
+<p>整理自己的成长经历，我所经历的事情其实也蛮多的，说起缺陷，就是太看重感情，别人一给我讲感情就容易着道。而且我这人生活一向节俭，除了大学时为学费和生活费发愁外，毕业后基本生活保证了，对钱多钱少没有太多具体概念，除了老婆拉我外，对旅游啊唱歌啊玩啊都不感兴趣，除了干活外的业务时间干嘛呢，打拳强身健体。说几个事情大家当笑话听好了：</p>
+<ul>
+<li>有一次在广州出差，同事约我出去大排档，问我喝啤酒吗，不喝，上头；吃海鲜吗，不吃，味腥。我同事说那你在青岛读四年书干嘛了？！</li>
+<li>我们项目组曾经有一次福利，每个人可以去外地旅游一次，报销路费和住宿；我忙来忙去把这个事给忘了，后来跟组内其它人聊天，发现每个人都出去了，要么三亚要么成都杭州的，就我一个人没行动；领导说后面再补给我，再后来这个事大家都忘了。</li>
+<li>还有一次我们项目组团队建设，组织大家去草原玩；正好我们师爷(我是磕过头正式拜师学艺)那几天也组织活动，我要上台表演，于是就给领导说去不了了，你们玩吧。领导劝我说机会难得，而且北京上海的同事一起聚聚。我义正言辞地说，一我经常去北京出差，所以那边同事聚的还是比较多的；二我这边也确实有些事；三咱们系统要7X24小时，总要有人值班的。 然后他们就去玩了，我上午去师爷那边表演，中午回来检查系统，开开心心地值了三天班。</li>
+</ul>
+<p>再说几个关于钱的，说实话我挣钱也不多，但经历过读大学没钱没出路的困境，所以对别人的难处还是深有感触，能帮就帮下的，举那么几件例子：</p>
+<ul>
+<li>组织捐款一般也参与下，但也都不多，汶川地震时还傻乎乎捐过2000，再后来红十字变成黑十字，就没再给国家捐过钱了。</li>
+<li>大学刚毕业那会儿，我工作还好，不愁吃穿了，有同学混不下饭，打电话借钱，我还说够吗，不够多借点。没想到过了几年那同学做生意发了，早早买房子宝马啥的。当然钱还我了，目前关系还都不错。</li>
+<li>还有个同学，犯了些事，坐监了；人虽犯法，但却也是落难的绝境，家里有困难，就每年援助他几千块钱。</li>
+<li>一个很不错的同学，遇到事情，实在没办法了，就在朋友圈里发求助。跟老婆商量下，我老婆也很通情达理，就给他转了约两万块钱，本想匿名，但朋友后来还是知道是我转的了。</li>
+</ul>
+<p>这些本属隐私，不太想说的。这儿说下什么意思呢，我自己没有多少消费驱动，对钱也不是很痴迷。但仍然觉得钱是个好东西，如果大家一起分钱的话，我也希望自己能多分点儿。但我绝对不会拿别人的那部分，如我让无缘无故放弃自己的利益让给别人，我可能是没那么大度的。我所接触的不少老板和创始人，很多都非常会说，对其他人怎么好怎么大度；再深入了解下去，实际做的却是另一回事；对于这种人我觉得企业肯定是做不大的。</p>
+<p>接触创业公司一年多，感觉若想做技术这一行，还是不要去创业公司。凡是跟你称兄道弟、谈感情讲义气、讲情怀讲理想的老板，一定不要跟，百分之九十九的概率是要坑你的。放着钱这么纯洁的东西不谈，去讲其它，这种老板做不大的，跟着也没前途；即使做大了，他也只让你拥有理想和情怀，钱的东西是不会给你的，像曹政这么牛逼的人不还是被蔡文胜把股权从百分之几忽悠到万分之几。</p>
+<h2 id="_8"><a name="user-content-_8" href="#_8" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>个人特点</h2>
+<p>我自己的特长呢，喜欢深入钻研，技术可能达不到顶级大牛的水平，但只要接触我的人都觉得我技术不错，算中牛总是可以的，<strong>又是实干派，会跟人沟通，懂方法论，懂管理，能团结人，而且内心坚韧不拔，又有“逢山开路，遇水搭桥”的勇气、决心和毅力，所以很适合做事，并且肯定能做成事</strong>。工作十年来，如果我和我的团队都解决不了的问题，做不了的产品，基本上也找不到能做成这件事的其他人其他团队了；话有些大，但也基本如此。</p>
+<p>出去找工作，我技术还是可以的，从2014年至今，大概面了4家(包含两家BAT)，也全都面试过了。不过我个人认为，技术只是个工具和手段，敲门砖，要出绩效出产品，更多靠得是用心体会、实干，在困境中能坚持走下去的勇气、决心和毅力。但技术还相对具体些，其它几个方面太虚了，没有长时间的接触，没有真正困境时的检验，是没法知道的。所以企业招人还必须得靠技术把关，然后再聊聊经验背景啥的。若能碰到那种又懂技术又能成事的猛人，就算是捡到宝贝了。呵呵，我就是捡到宝贝的那种，这话是我入职惠普几个月后manager对别人说的。但是猛人要成事也是需要团队的，我有幸分别在不同的公司进入了top10的优秀团队，个人也是top10的优秀员工，团队成就了我，反过来说我也成就了团队。</p>
+<h2 id="_9"><a name="user-content-_9" href="#_9" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>总结</h2>
+<p>时间如梭，转眼间，已经工作十年了，回想起来泪沾巾。</p>
+<p>成绩方面有那么一点点儿，技术不算大牛，谦虚点算中牛总是可以的；家庭也算幸福；经历也算蛮丰富的，白手起家，完全靠双手，还助学贷款，买房，买车，伊拉克打AK47，太极拳，兼职大学老师，就是在华为惠普这种大型公司，不靠跳槽就能加薪百分之四五十这么少见的事情，我都经历过两次；有高峰也有低谷；被人赏识过，也被人蒙骗过；见识了一个行业的风光，也见识了一个行业的没落。</p>
+<p>若说混得好，跟周围很多同龄人人比起来，有创业当老板的，有做高管的，有在BAT拿高薪的，有混技术论坛混成牛人的，有把老婆孩子居家迁到海外的，我混到这个程度其实跟成功不搭边的。</p>
+<p>尤其目前又再次处在人生的抉择路口上：</p>
+<ul>
+<li><code>去大企业找份稳定的技术工作</code>- - -其实我比较擅长踏踏实实做事，大公司也比较适合我；但若想成事、出成绩，还是需要团队、公司政策和机遇；去了大公司的哪个团队也是看命的，就如我在惠普也过了一年多绩效低迷的时间，后来换了个产品和团队才改变；所以即使大公司，能遇到有实干有魄力的老大，跟对人，也是靠碰的。</li>
+<li><code>以合伙人身份加入初创企业，拿个低薪分些股分</code>- - -已经遇到几个已成立的创业公司，都不是很合意；实际加入才发现，身份有些尴尬，想大刀阔斧干吧非创始人没有那么多活动空间；而且自己一直踏实习惯了，创始人夸大其词与自我感觉良好的程度都与实际偏离太大，已经心灰意冷，这条路不会走了。</li>
+<li><code>不跟别人了，自己干</code>- - -我有做成事的本领，有在绝境中坚持下去的决心、勇气和毅力，但确实不擅长跟人专门搞关系，不喜欢夸大吹嘘；而且成功、名利、上市啊对我没有那么大的吸引力，在我看来家庭要远远比事业重要，即使真的逼得没办法了自己干，也只是为了谋生养家。虽然我能做事且能成事，不过消费欲望低，只要能维持最基本的生活保障就可以，所以对融资啊上市啊身价多少啊，听听当然也羡慕，但实际吸引力有多大嘛，还真说不上。</li>
+</ul>
+<p>这十年，奋斗一直在进行；这档口，事业又要重新开始.............</p></article></body></html>
