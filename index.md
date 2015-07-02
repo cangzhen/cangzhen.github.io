@@ -64,7 +64,8 @@ title: 江湾太极—马殿银
   </div>
   <div class="sps">
       <h4><i class="icon_download"></i>其它资料链接</h4>
-      <p><a href="http://www.taijiren.cn/Details/19326.html">太极传承网收录马殿银资料</a>
+      <p><a href="http://v.youku.com/v_show/id_XMTI2OTAyMjAwNA==.html?from=s1.8-1-1.2">马殿银 陈式心意混元太极拳32式炮锤表演(视频)</a>
+      <br><a href="http://www.taijiren.cn/Details/19326.html">太极传承网收录马殿银资料</a>
       <br><a href="http://blog.sina.com.cn/s/blog_72531baa0101hhfy.html">江湾体育场太极拳辅导站30周年实况(新浪博客)</a>
       <br><a href="http://www.tudou.com/programs/view/oTFeypqvbAs">太极名师: 马殿银 上海陈式太极拳协会20周年庆典特邀表演(视频)</a>
       <br><a href="http://www.tudou.com/programs/view/L1e5x28Ookg">太极名师: 马殿银 陈式太极拳一路(视频)</a>
